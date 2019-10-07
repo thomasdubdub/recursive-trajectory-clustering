@@ -4,14 +4,14 @@ The clustering algorithm trdbscan is based on the recursive DBSCAN method introd
 
 C. E. Verdonk Gallego, V. F. Fernando Gómez, F.J. Saez Nieto, and M.G. Martinez, "Discussion On Density-Based Clustering Methods Applied for Automated Identification of Airspace Flows," in *2018 IEEE/AIAA 37th Digital Avionics Systems Conference (DASC).* IEEE, 2018. p. 1-10.
 
-As this method proves useful in the context of the identification of traffic flows (clusters of aircraft trajectories), the algorithm is used with the Swiss example provided by the [traffic library](https://github.com/xoolive/traffic).
+As this method proves useful in the context of the identification of traffic flows (clusters of aircraft trajectories), the trdbscan algorithm is used with the Swiss traffic example provided by the [traffic library](https://github.com/xoolive/traffic).
 Results are plotted with the [sectflow library](https://github.com/lbasora/sectflow) and can be compared with the DBSCAN method provided as an example in the [traffic documentation](https://traffic-viz.github.io/clustering.html), or the TrajClust method (also based on a recursive DBSCAN) supplied by the sectflow library and described in the following scientific paper:
 
 L. Basora, V. Courchelle, J. Bedouet and T. Dubot, "Occupancy Peak Estimation from Sector Geometry and Traffic Flow," in *Proceedings of the SESAR Innovation Days*, 2018
 
 The main advantages of the trdbscan method are:
-* no need to specify the epsilon parameter of the DBSCAN algorithm, automatically at each iteration by the KNN elbow method
-* depending on the decrement ratio, anomalies are classified: largest anomalies met at iteration 1 with a large epsilon are the first elements of the anomalies_ list.
+* no need to specify the epsilon parameter of the DBSCAN algorithm, automatically computed at each iteration by the KNN elbow method
+* anomalies are stored (anomalies_) and classified: largest anomalies met at iteration 1 with a large epsilon are the first elements of the anomalies_ list
 
 
 Example: main traffic flows from flight trajectories over Switzerland on August 1st 2018
