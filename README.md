@@ -7,7 +7,7 @@ C. E. Verdonk Gallego, V. F. Fernando Gómez, F.J. Saez Nieto, and M.G. Martinez
 As this method proves useful in the context of the identification of traffic flows (clusters of aircraft trajectories), the algorithm is used with the Swiss example provided by the [traffic library](https://github.com/xoolive/traffic).
 Results are plotted with the [sectflow library](https://github.com/lbasora/sectflow) and can be compared with the DBSCAN method provided as an example in the [traffic documentation](https://traffic-viz.github.io/clustering.html), or the TrajClust method (also based on a recursive DBSCAN) supplied by the sectflow library and described in the following scientific paper:
 
-L. Basora, V. Courchelle, J. Bedouet and T. Dubot, "Occupancy Peak Estimation from Sector Geometry and Traffic Flow," in Proceedings of the SESAR Innovation Days, 2018
+L. Basora, V. Courchelle, J. Bedouet and T. Dubot, "Occupancy Peak Estimation from Sector Geometry and Traffic Flow," in *Proceedings of the SESAR Innovation Days*, 2018
 
 The main advantages of the trdbscan method are:
 * no need to specify the epsilon parameter of the DBSCAN algorithm, automatically at each iteration by the KNN elbow method
